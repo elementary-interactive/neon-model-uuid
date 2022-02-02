@@ -2,7 +2,7 @@
   "name": "neon/model-uuid",
   "description": "",
   "type": "project",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Balázs Ercsey",
