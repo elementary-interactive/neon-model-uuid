@@ -1,5 +1,5 @@
 {
-    "name": "elementary-interactive/threshold-model-uuid",
+    "name": "neon/model-uuid",
     "description": "",
     "type": "project",
     "license": "proprietary",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
       "psr-4": {
-        "Threshold\\": "src/"
+        "Neon\\": "src/"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "Threshold\\Tests\\": "tests/"
+        "Neon\\Tests\\": "tests/"
       }
     },
     "require": {
