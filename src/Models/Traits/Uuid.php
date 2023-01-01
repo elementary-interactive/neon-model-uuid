@@ -10,6 +10,25 @@ namespace Neon\Models\Traits;
  */
 trait Uuid
 {
+    /** Initialize UUID trait.
+     * 
+     * @return void
+     */
+    protected function initializeUuid(): void
+    {
+        /** Set incrementing to false, as we do not need auto incrementing value.
+         * 
+         * @var boolean
+         */
+        $this->incrementing = false;
+
+        /** Set key type to string.
+         * 
+         * @var string
+         */
+        $this->keyType      = 'string';
+    }
+
     /** Booting UUID trait.
      * 
      */
@@ -25,24 +44,5 @@ trait Uuid
                 $model->{$model->getKeyName()} = (string) \Str::uuid();
             }
         });
-    }
-
-    
-    /** As because we use UUID as primary key, we don't need auto incrementing a stupid integer.
-     *
-     * @return bool
-     */
-    public function getIncrementing(): bool
-    {
-        return false;
-    }
-
-    /** The type of the auto incrementing identifier
-     *
-     * @return string
-     */
-    public function getKeyType(): string
-    {
-        return 'string';
     }
 }
